@@ -1,0 +1,30 @@
+{
+  "name": "nascar-ng-app",
+  "version": "0.0.1",
+  "description": "NASCAR App",
+  "author": "aestrada7@outlook.com",
+  "dependencies": {
+    "angular": "^1.6.1",
+    "foundation-icons": "^1.0.1",
+    "foundation-sites": "^6.3.0"
+  },
+  "devDependencies": {
+    "copyfiles": "^1.1.0",
+    "node-sass": "^4.3.0",
+    "nodemon": "^1.11.0"
+  },
+  "scripts": {
+    "copy": "npm run copy:angular && npm run copy:foundation && npm run copy:foundation-icons",
+    "copy:angular": "copyfiles -f node_modules/angular/angular.min.js app/vendor && echo Angular Copied",
+    "copy:foundation": "npm run copy:foundation:scss && npm run copy:foundation:js && npm run copy:jquery",
+    "copy:foundation:scss": "copyfiles -u 3 node_modules/foundation-sites/scss/**/*.scss app/styles/foundation && echo Foundation SCSS Copied",
+    "copy:foundation:js": "copyfiles -f node_modules/foundation-sites/dist/js/foundation.min.js app/vendor && echo Foundation JS Copied",
+    "copy:foundation-icons": "copyfiles -f node_modules/foundation-icons/foundation-icons.* app/dist/fonts && echo Foundation Icons Copied",
+    "copy:jquery": "copyfiles -f node_modules/foundation-sites/vendor/jquery/dist/jquery.min.js app/vendor && echo jQuery Copied",
+    "update": "npm run copy && echo Update Complete",
+    "develop": "npm run watch",
+    "build:css": "node-sass app/styles/nascar-app.scss app/dist/nascar-app.css",
+    "watch:css": "nodemon -e scss -x \"npm run build:css\"",
+    "watch": "npm run watch:css"
+  }
+}

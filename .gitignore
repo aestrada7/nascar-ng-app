@@ -1,0 +1,14 @@
+/node_modules
+/app/vendor
+/app/dist
+/app/styles/foundation
+
+.DS_Store
+.tscache
+/.idea/*
+*.tmp.txt
+*.sublime-project
+*.sublime-workspace
+
+!/.idea/codeStyleSettings.xml
+npm-debug.log
