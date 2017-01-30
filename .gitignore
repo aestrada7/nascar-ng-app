@@ -2,6 +2,7 @@
 /app/vendor
 /app/dist
 /app/styles/foundation
+/app/styles/_vendor
 
 .DS_Store
 .tscache

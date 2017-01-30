@@ -1,0 +1,7 @@
+@import 'variables';             //App defined variables
+@import 'mixins';                //App defined mixins
+@import 'foundation/util/util';  
+@import 'settings';              //Foundation Settings
+@import 'foundation/foundation'; //Foundation
+
+@include foundation-everything();
