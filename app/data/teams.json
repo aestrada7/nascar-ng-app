@@ -1,0 +1,254 @@
+[
+  {
+    "number": "1",
+    "make": "Chevrolet",
+    "team": "Chip Ganassi Racing",
+    "sponsor": "McDonadl's / Cessna"
+  },
+  {
+    "number": "2",
+    "make": "Ford",
+    "team": "Penske Racing",
+    "sponsor": "Miller Lite"
+  },
+  {
+    "number": "3",
+    "make": "Chevrolet",
+    "team": "Richard Childress Racing",
+    "sponsor": "Dow Chemicals"
+  },
+  {
+    "number": "4",
+    "make": "Ford",
+    "team": "Stewart-Haas Racing",
+    "sponsor": "Jimmy Johns"
+  },
+  {
+    "number": "5",
+    "make": "Chevrolet",
+    "team": "Hendrick Motorsports",
+    "sponsor": "Farmer's Insurance"
+  },
+  {
+    "number": "6",
+    "make": "Ford",
+    "team": "Roush-Fenway Racing",
+    "sponsor": "Advocare"
+  },
+  {
+    "number": "7",
+    "make": "Chevrolet",
+    "team": "Tommy Baldwin Racing",
+    "sponsor": "Golden Corral"
+  },
+  {
+    "number": "10",
+    "make": "Ford",
+    "team": "Stewart-Haas Racing",
+    "sponsor": "Aspen Dental"
+  },
+  {
+    "number": "11",
+    "make": "Toyota",
+    "team": "Joe Gibbs Racing",
+    "sponsor": "Fedex"
+  },
+  {
+    "number": "13",
+    "make": "Chevrolet",
+    "team": "Germain Racing",
+    "sponsor": "Geico"
+  },
+  {
+    "number": "14",
+    "make": "Ford",
+    "team": "Stewart-Haas Racing",
+    "sponsor": "Mobil 1"
+  },
+  {
+    "number": "15",
+    "make": "Toyota",
+    "team": "Premium Motorsports",
+    "sponsor": "Aaron's"
+  },
+  {
+    "number": "17",
+    "make": "Ford",
+    "team": "Roush-Fenway Racing",
+    "sponsor": ""
+  },
+  {
+    "number": "18",
+    "make": "Toyota",
+    "team": "Joe Gibbs Racing",
+    "sponsor": "M&M's"
+  },
+  {
+    "number": "19",
+    "make": "Toyota",
+    "team": "Joe Gibbs Racing",
+    "sponsor": "Arris"
+  },
+  {
+    "number": "20",
+    "make": "Toyota",
+    "team": "Joe Gibbs Racing",
+    "sponsor": "Dewalt Tools"
+  },
+  {
+    "number": "21",
+    "make": "Ford",
+    "team": "Wood Brothers Racing",
+    "sponsor": "Motorcraft"
+  },
+  {
+    "number": "22",
+    "make": "Ford",
+    "team": "Penske Racing",
+    "sponsor": "Shell / Pennzoil"
+  },
+  {
+    "number": "23",
+    "make": "Toyota",
+    "team": "BK Racing",
+    "sponsor": "Dr. Pepper"
+  },
+  {
+    "number": "24",
+    "make": "Chevrolet",
+    "team": "Hendrick Motorsports",
+    "sponsor": "NAPA Autoparts"
+  },
+  {
+    "number": "27",
+    "make": "Chevrolet",
+    "team": "Richard Childress Racing",
+    "sponsor": "Menard's"
+  },
+  {
+    "number": "31",
+    "make": "Chevrolet",
+    "team": "Richard Childress Racing",
+    "sponsor": "Caterpillar"
+  },
+  {
+    "number": "32",
+    "make": "Ford",
+    "team": "Go FAS Racing",
+    "sponsor": "Can-Am"
+  },
+  {
+    "number": "33",
+    "make": "Chevrolet",
+    "team": "Circle Sport - The Motorsports Group",
+    "sponsor": "Starter"
+  },
+  {
+    "number": "34",
+    "make": "Ford",
+    "team": "Front Row Motorsports",
+    "sponsor": "Snapfitness"
+  },
+  {
+    "number": "37",
+    "make": "Chevrolet",
+    "team": "JTG Daugherty Racing",
+    "sponsor": "Kleenex"
+  },
+  {
+    "number": "38",
+    "make": "Ford",
+    "team": "Front Row Motorsports",
+    "sponsor": "CRX"
+  },
+  {
+    "number": "41",
+    "make": "Ford",
+    "team": "Stewart-Haas Racing",
+    "sponsor": "Monster Energy / Haas"
+  },
+  {
+    "number": "42",
+    "make": "Chevrolet",
+    "team": "Chip Ganassi Racing",
+    "sponsor": "Target"
+  },
+  {
+    "number": "43",
+    "make": "Ford",
+    "team": "Richard Petty Motorsports",
+    "sponsor": "Smithfield"
+  },
+  {
+    "number": "47",
+    "make": "Chevrolet",
+    "team": "JTG Daugherty Racing",
+    "sponsor": "Clorox"
+  },
+  {
+    "number": "48",
+    "make": "Chevrolet",
+    "team": "Hendrick Motorsports",
+    "sponsor": "Lowe's"
+  },
+  {
+    "number": "51",
+    "make": "Chevrolet",
+    "team": "Rick Ware Racing",
+    "sponsor": ""
+  },
+  {
+    "number": "55",
+    "make": "Toyota",
+    "team": "Premium Motorsports",
+    "sponsor": ""
+  },
+  {
+    "number": "72",
+    "make": "Ford",
+    "team": "TriStar Motorsports",
+    "sponsor": ""
+  },
+  {
+    "number": "75",
+    "make": "Chevrolet",
+    "team": "Beard Motorsports",
+    "sponsor": "South Point Casino"
+  },
+  {
+    "number": "77",
+    "make": "Toyota",
+    "team": "Furniture Row Racing",
+    "sponsor": "5-Hour Energy"
+  },
+  {
+    "number": "78",
+    "make": "Toyota",
+    "team": "Furniture Row Racing",
+    "sponsor": "Denver Mattress"
+  },
+  {
+    "number": "83",
+    "make": "Toyota",
+    "team": "BK Racing",
+    "sponsor": ""
+  },
+  {
+    "number": "88",
+    "make": "Chevrolet",
+    "team": "Hendrick Motorsports",
+    "sponsor": "Nationwide / Axalta"
+  },
+  {
+    "number": "95",
+    "make": "Chevrolet",
+    "team": "Leavine Family Racing",
+    "sponsor": "K-love"
+  },
+  {
+    "number": "96",
+    "make": "Toyota",
+    "team": "Gaunt Brothers Racing",
+    "sponsor": ""
+  }
+]
