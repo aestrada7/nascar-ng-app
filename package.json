@@ -10,6 +10,7 @@
   },
   "devDependencies": {
     "copyfiles": "^1.1.0",
+    "http-server": "^0.9.0",
     "node-sass": "^4.3.0",
     "nodemon": "^1.11.0"
   },
@@ -21,8 +22,9 @@
     "copy:foundation:js": "copyfiles -f node_modules/foundation-sites/dist/js/foundation.min.js app/vendor && echo Foundation JS Copied",
     "copy:foundation-icons": "copyfiles -f node_modules/foundation-icons/foundation-icons.* app/dist/fonts && echo Foundation Icons Copied",
     "copy:jquery": "copyfiles -f node_modules/foundation-sites/vendor/jquery/dist/jquery.min.js app/vendor && echo jQuery Copied",
+    "start": "http-server ./app",
     "update": "npm run copy && echo Update Complete",
-    "develop": "npm run watch",
+    "develop": "start npm run start && start npm run watch",
     "build:css": "node-sass app/styles/nascar-ng-app.scss app/dist/nascar-ng-app.css",
     "watch:css": "nodemon -e scss -x \"npm run build:css\"",
     "watch": "npm run watch:css"

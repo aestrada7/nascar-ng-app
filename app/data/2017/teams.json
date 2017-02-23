@@ -1,251 +1,293 @@
 [
   {
+    "season": "2017",
     "number": "1",
     "make": "Chevrolet",
     "team": "Chip Ganassi Racing",
-    "sponsor": "McDonadl's / Cessna"
+    "sponsor": "McDonald's / Cessna"
   },
   {
+    "season": "2017",
     "number": "2",
     "make": "Ford",
     "team": "Penske Racing",
     "sponsor": "Miller Lite"
   },
   {
+    "season": "2017",
     "number": "3",
     "make": "Chevrolet",
     "team": "Richard Childress Racing",
     "sponsor": "Dow Chemicals"
   },
   {
+    "season": "2017",
     "number": "4",
     "make": "Ford",
     "team": "Stewart-Haas Racing",
     "sponsor": "Jimmy Johns"
   },
   {
+    "season": "2017",
     "number": "5",
     "make": "Chevrolet",
     "team": "Hendrick Motorsports",
     "sponsor": "Farmer's Insurance"
   },
   {
+    "season": "2017",
     "number": "6",
     "make": "Ford",
     "team": "Roush-Fenway Racing",
     "sponsor": "Advocare"
   },
   {
+    "season": "2017",
     "number": "7",
     "make": "Chevrolet",
     "team": "Tommy Baldwin Racing",
     "sponsor": "Golden Corral"
   },
   {
+    "season": "2017",
     "number": "10",
     "make": "Ford",
     "team": "Stewart-Haas Racing",
     "sponsor": "Aspen Dental"
   },
   {
+    "season": "2017",
     "number": "11",
     "make": "Toyota",
     "team": "Joe Gibbs Racing",
     "sponsor": "Fedex"
   },
   {
+    "season": "2017",
     "number": "13",
     "make": "Chevrolet",
     "team": "Germain Racing",
     "sponsor": "Geico"
   },
   {
+    "season": "2017",
     "number": "14",
     "make": "Ford",
     "team": "Stewart-Haas Racing",
     "sponsor": "Mobil 1"
   },
   {
+    "season": "2017",
     "number": "15",
     "make": "Toyota",
     "team": "Premium Motorsports",
     "sponsor": "Aaron's"
   },
   {
+    "season": "2017",
     "number": "17",
     "make": "Ford",
     "team": "Roush-Fenway Racing",
     "sponsor": ""
   },
   {
+    "season": "2017",
     "number": "18",
     "make": "Toyota",
     "team": "Joe Gibbs Racing",
     "sponsor": "M&M's"
   },
   {
+    "season": "2017",
     "number": "19",
     "make": "Toyota",
     "team": "Joe Gibbs Racing",
     "sponsor": "Arris"
   },
   {
+    "season": "2017",
     "number": "20",
     "make": "Toyota",
     "team": "Joe Gibbs Racing",
     "sponsor": "Dewalt Tools"
   },
   {
+    "season": "2017",
     "number": "21",
     "make": "Ford",
     "team": "Wood Brothers Racing",
     "sponsor": "Motorcraft"
   },
   {
+    "season": "2017",
     "number": "22",
     "make": "Ford",
     "team": "Penske Racing",
     "sponsor": "Shell / Pennzoil"
   },
   {
+    "season": "2017",
     "number": "23",
     "make": "Toyota",
     "team": "BK Racing",
     "sponsor": "Dr. Pepper"
   },
   {
+    "season": "2017",
     "number": "24",
     "make": "Chevrolet",
     "team": "Hendrick Motorsports",
     "sponsor": "NAPA Autoparts"
   },
   {
+    "season": "2017",
     "number": "27",
     "make": "Chevrolet",
     "team": "Richard Childress Racing",
     "sponsor": "Menard's"
   },
   {
+    "season": "2017",
     "number": "31",
     "make": "Chevrolet",
     "team": "Richard Childress Racing",
     "sponsor": "Caterpillar"
   },
   {
+    "season": "2017",
     "number": "32",
     "make": "Ford",
     "team": "Go FAS Racing",
     "sponsor": "Can-Am"
   },
   {
+    "season": "2017",
     "number": "33",
     "make": "Chevrolet",
     "team": "Circle Sport - The Motorsports Group",
     "sponsor": "Starter"
   },
   {
+    "season": "2017",
     "number": "34",
     "make": "Ford",
     "team": "Front Row Motorsports",
     "sponsor": "Snapfitness"
   },
   {
+    "season": "2017",
     "number": "37",
     "make": "Chevrolet",
     "team": "JTG Daugherty Racing",
     "sponsor": "Kleenex"
   },
   {
+    "season": "2017",
     "number": "38",
     "make": "Ford",
     "team": "Front Row Motorsports",
     "sponsor": "CRX"
   },
   {
+    "season": "2017",
     "number": "41",
     "make": "Ford",
     "team": "Stewart-Haas Racing",
     "sponsor": "Monster Energy / Haas"
   },
   {
+    "season": "2017",
     "number": "42",
     "make": "Chevrolet",
     "team": "Chip Ganassi Racing",
     "sponsor": "Target"
   },
   {
+    "season": "2017",
     "number": "43",
     "make": "Ford",
     "team": "Richard Petty Motorsports",
     "sponsor": "Smithfield"
   },
   {
+    "season": "2017",
     "number": "47",
     "make": "Chevrolet",
     "team": "JTG Daugherty Racing",
     "sponsor": "Clorox"
   },
   {
+    "season": "2017",
     "number": "48",
     "make": "Chevrolet",
     "team": "Hendrick Motorsports",
     "sponsor": "Lowe's"
   },
   {
+    "season": "2017",
     "number": "51",
     "make": "Chevrolet",
     "team": "Rick Ware Racing",
     "sponsor": ""
   },
   {
+    "season": "2017",
     "number": "55",
     "make": "Toyota",
     "team": "Premium Motorsports",
     "sponsor": ""
   },
   {
+    "season": "2017",
     "number": "72",
     "make": "Ford",
     "team": "TriStar Motorsports",
     "sponsor": ""
   },
   {
+    "season": "2017",
     "number": "75",
     "make": "Chevrolet",
     "team": "Beard Motorsports",
     "sponsor": "South Point Casino"
   },
   {
+    "season": "2017",
     "number": "77",
     "make": "Toyota",
     "team": "Furniture Row Racing",
     "sponsor": "5-Hour Energy"
   },
   {
+    "season": "2017",
     "number": "78",
     "make": "Toyota",
     "team": "Furniture Row Racing",
     "sponsor": "Denver Mattress"
   },
   {
+    "season": "2017",
     "number": "83",
     "make": "Toyota",
     "team": "BK Racing",
     "sponsor": ""
   },
   {
+    "season": "2017",
     "number": "88",
     "make": "Chevrolet",
     "team": "Hendrick Motorsports",
     "sponsor": "Nationwide / Axalta"
   },
   {
+    "season": "2017",
     "number": "95",
     "make": "Chevrolet",
     "team": "Leavine Family Racing",
     "sponsor": "K-love"
   },
   {
+    "season": "2017",
     "number": "96",
     "make": "Toyota",
     "team": "Gaunt Brothers Racing",

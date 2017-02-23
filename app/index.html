@@ -1,12 +1,22 @@
-<html ng-app="nascar-ng-app">
+<html ng-app="nascar-app" ng-strict-di>
   <head>
     <link rel="stylesheet" href="./dist/nascar-ng-app.css" />
     <title>NASCAR Angular App</title>
   </head>
   <body>
+    <div ng-controller="ChampionshipCtrl">
+      <div class="driver" ng-repeat="driver in driverList">
+        <driver-image id="driver.id" season="season" team="" infer="yes"></driver-image>
+        <span class="name">{{driver.name}}</span>
+        <span class="lastname">{{driver.lastname}}</span>
+      </div>
+    </div>
     <script src="./vendor/jquery.min.js"></script>
     <script src="./vendor/foundation.min.js"></script>
     <script src="./vendor/angular.min.js"></script>
     <script src="app.js"></script>
+    <script src="components/services/static-data.js"></script>
+    <script src="components/directives/driver-image.js"></script>
+    <script src="features/championship.js"></script>
   </body>
 </html>

@@ -1,0 +1,41 @@
+[
+  {
+    "season": "2017",
+    "event-number": "1",
+    "event-name": "Daytona 500",
+    "track": "Daytona International Speedway",
+    "date": "2/26/2017",
+    "winner": "kensem",
+    "pole-winner": "earnhd",
+    "results": [
+      { "team": "20", "led": 1, "driver": "kensem" },
+      { "team": "19", "led": 0, "driver": "suared" },
+      { "team": "18", "led": 0, "driver": "buschk1" },
+      { "team": "11", "led": 0, "driver": "hamlid" }
+    ],
+    "stage-1": [
+      { "team": "20", "driver": "kensem" },
+      { "team": "19", "driver": "suared" },
+      { "team": "18", "driver": "buschk1" },
+      { "team": "11", "driver": "hamlid" }
+    ],
+    "stage-2": [
+    ]
+  },
+  {
+    "season": "2017",
+    "event-number": "2",
+    "event-name": "",
+    "track": "Phoenix Raceway",
+    "date": "3/5/2017",
+    "winner": "",
+    "pole-winner": "",
+    "results": [
+      { "team": "20", "led": 1, "driver": "kensem" }
+    ],
+    "stage-1": [
+    ],
+    "stage-2": [
+    ]
+  }
+]

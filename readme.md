@@ -4,6 +4,7 @@
 * Install git command line tools
 * `git clone https://github.com/aestrada7/nascar-ng-app.git`
 * `cd nascar-ng-app`
+* `npm install http-server -g`
 * `npm install`
 * `npm run update`
 * `npm run develop`
