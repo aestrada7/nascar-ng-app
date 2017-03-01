@@ -10,84 +10,84 @@
     "id": "keselb",
     "name": "Brad",
     "lastname": "Keselowski",
-    "hometown": "",
+    "hometown": "Rochester Hills, MI",
     "country": 1
   },
   {
     "id": "dilloa",
     "name": "Austin",
     "lastname": "Dillon",
-    "hometown": "NC",
+    "hometown": "Lewisville, NC",
     "country": 1
   },
   {
     "id": "harvik",
     "name": "Kevin",
     "lastname": "Harvick",
-    "hometown": "",
+    "hometown": "Bakersfield, CA",
     "country": 1
   },
   {
     "id": "kahnek",
     "name": "Kasey",
     "lastname": "Kahne",
-    "hometown": "",
+    "hometown": "Enumclaw, WA",
     "country": 1
   },
   {
     "id": "baynet",
     "name": "Trevor",
     "lastname": "Bayne",
-    "hometown": "",
+    "hometown": "Knoxville, TN",
     "country": 1
   },
   {
     "id": "sadlee",
     "name": "Elliott",
     "lastname": "Sadler",
-    "hometown": "",
+    "hometown": "Emporia, VA",
     "country": 1
   },
   {
     "id": "patrid",
     "name": "Danica",
     "lastname": "Patrick",
-    "hometown": "Chicago, IL",
+    "hometown": "Roscoe, IL",
     "country": 1
   },
   {
     "id": "hamlid",
     "name": "Denny",
     "lastname": "Hamlin",
-    "hometown": "Chester, VA",
+    "hometown": "Chesterfield, VA",
     "country": 1
   },
   {
     "id": "dillot",
     "name": "Ty",
     "lastname": "Dillon",
-    "hometown": "NC",
+    "hometown": "Lewisville, NC",
     "country": 1
   },
   {
     "id": "bowyec",
     "name": "Clint",
     "lastname": "Boywer",
-    "hometown": "KA",
+    "hometown": "Emporia, KS",
     "country": 1
   },
   {
     "id": "waltrm",
     "name": "Michael",
     "lastname": "Waltrip",
-    "hometown": "",
+    "hometown": "Owensboro, KY",
     "country": 1
   },
   {
     "id": "stenhr",
     "name": "Ricky",
     "lastname": "Stenhouse, Jr.",
-    "hometown": "",
+    "hometown": "Olive Branch, MS",
     "country": 1
   },
   {
@@ -108,35 +108,35 @@
     "id": "kensem",
     "name": "Matt",
     "lastname": "Kenseth",
-    "hometown": "WI",
+    "hometown": "Cambridge, WI",
     "country": 1
   },
   {
     "id": "blaner",
     "name": "Ryan",
     "lastname": "Blaney",
-    "hometown": "",
+    "hometown": "High Point, NC",
     "country": 1
   },
   {
     "id": "loganj",
     "name": "Joey",
     "lastname": "Logano",
-    "hometown": "CT",
+    "hometown": "Middletown, CT",
     "country": 1
   },
   {
     "id": "gasejo",
     "name": "Joey",
     "lastname": "Gase",
-    "hometown": "",
+    "hometown": "Cedar Rapids, IA",
     "country": 1
   },
   {
     "id": "gauldg",
     "name": "Gray",
     "lastname": "Gaulding",
-    "hometown": "",
+    "hometown": "Colonial Heights, VA",
     "country": 1
   },
   {
@@ -150,49 +150,49 @@
     "id": "menarp",
     "name": "Paul",
     "lastname": "Menard",
-    "hometown": "",
+    "hometown": "Eau Claire, WI",
     "country": 1
   },
   {
     "id": "newmar",
     "name": "Ryan",
     "lastname": "Newman",
-    "hometown": "",
+    "hometown": "South Bend, IN",
     "country": 1
   },
   {
     "id": "dibenm",
     "name": "Matt",
     "lastname": "DiBenedetto",
-    "hometown": "",
+    "hometown": "Grass Valley, CA",
     "country": 1
   },
   {
     "id": "earnhj",
     "name": "Jeffrey",
     "lastname": "Earnhardt",
-    "hometown": "",
+    "hometown": "Mooresville, NC",
     "country": 1
   },
   {
     "id": "cassil",
     "name": "Landon",
     "lastname": "Cassill",
-    "hometown": "",
+    "hometown": "Cedar Rapids, IA",
     "country": 1
   },
   {
     "id": "buescc",
     "name": "Chris",
     "lastname": "Buescher",
-    "hometown": "",
+    "hometown": "Prosper, TX",
     "country": 1
   },
   {
     "id": "ragand",
     "name": "David",
     "lastname": "Ragan",
-    "hometown": "",
+    "hometown": "Unadilla, GA",
     "country": 1
   },
   {
@@ -213,14 +213,14 @@
     "id": "almira",
     "name": "Aric",
     "lastname": "Almirola",
-    "hometown": "",
+    "hometown": "Tampa, FL",
     "country": 1
   },
   {
     "id": "allmea",
     "name": "A.J.",
     "lastname": "Allmendinger",
-    "hometown": "",
+    "hometown": "Los Gatos, CA",
     "country": 1
   },
   {
@@ -234,35 +234,35 @@
     "id": "hillti",
     "name": "Timmy",
     "lastname": "Hill",
-    "hometown": "",
+    "hometown": "Port Tobacco, MD",
     "country": 1
   },
   {
     "id": "sorenr",
     "name": "Reed",
     "lastname": "Sorenson",
-    "hometown": "",
+    "hometown": "Peachtree City, GA",
     "country": 1
   },
   {
     "id": "whittc",
     "name": "Cole",
     "lastname": "Whitt",
-    "hometown": "",
+    "hometown": "Alpine, CA",
     "country": 1
   },
   {
     "id": "gaughb",
     "name": "Brendan",
     "lastname": "Gaughan",
-    "hometown": "",
+    "hometown": "Las Vegas, NV",
     "country": 1
   },
   {
     "id": "jonese",
     "name": "Erik",
     "lastname": "Jones",
-    "hometown": "",
+    "hometown": "Byron, MI",
     "country": 1
   },
   {
@@ -276,7 +276,7 @@
     "id": "lajoic",
     "name": "Corey",
     "lastname": "LaJoie",
-    "hometown": "",
+    "hometown": "Concord, NC",
     "country": 1
   },
   {
@@ -290,14 +290,28 @@
     "id": "mcdowem",
     "name": "Michael",
     "lastname": "McDowell",
-    "hometown": "",
+    "hometown": "Phoenix, AZ",
     "country": 1
   },
   {
     "id": "kennid",
     "name": "D.J.",
     "lastname": "Kennington",
-    "hometown": "",
+    "hometown": "St. Thomas, ON",
+    "country": 3
+  },
+  {
+    "id": "wareco",
+    "name": "Cody",
+    "lastname": "Ware",
+    "hometown": "Greensboro, NC",
+    "country": 1
+  },
+  {
+    "id": "copede",
+    "name": "Derrike",
+    "lastname": "Cope",
+    "hometown": "Spanaway, WA",
     "country": 1
   }
 ]
