@@ -4,19 +4,22 @@
     <title>NASCAR Angular App</title>
   </head>
   <body>
-    <div ng-controller="ChampionshipCtrl">
-      <div class="driver" ng-repeat="driver in driverList">
-        <driver-image id="driver.id" season="season" team="" infer="yes"></driver-image>
-        <span class="name">{{driver.name}}</span>
-        <span class="lastname">{{driver.lastname}}</span>
-      </div>
+    <!--move to it's own file later-->
+    <div class="standings" ng-controller="ChampionshipCtrl">
+      <grid rows-per-page="10" grid-provider="driverList" 
+            field-definition="fieldDefinition" id-field="id"
+            strings="{ 'itemCount': 'Showing %%0 - %%1 of %%2',
+                       'previous': 'Previous',
+                       'next': 'Next' }"></grid>
     </div>
     <script src="./vendor/jquery.min.js"></script>
     <script src="./vendor/foundation.min.js"></script>
     <script src="./vendor/angular.min.js"></script>
     <script src="app.js"></script>
     <script src="components/services/static-data.js"></script>
+    <script src="components/services/confirm-service.js"></script>
     <script src="components/directives/driver-image.js"></script>
+    <script src="components/directives/grid.js"></script>
     <script src="features/championship.js"></script>
   </body>
 </html>

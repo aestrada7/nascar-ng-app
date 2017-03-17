@@ -1,0 +1,15 @@
+.standings {
+  driver-image {
+    img {
+      width: 100px;
+    }
+  }
+
+  .no-edit {
+    text-transform: uppercase;
+  }
+
+  .grid-column.image {
+    padding: 0 rem-calc(15) !important;
+  }
+}

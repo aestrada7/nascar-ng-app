@@ -1,0 +1,80 @@
+@mixin display-flex($is-important: null) {
+  display: -ms-flexbox $is-important;
+  display: -webkit-flex $is-important;
+  display: flex $is-important;
+}
+
+@mixin flex-justify-content($justify-content) {
+  justify-content: $justify-content;
+  -webkit-justify-content: $justify-content;
+
+  @if($justify-content == space-around) {
+    -ms-flex-pack: distribute;
+  } @else if($justify-content == space-between) {
+    -ms-flex-pack: justify;
+  } @else if($justify-content == flex-end) {
+    -ms-flex-pack: end;
+  } @else if($justify-content == flex-start) {
+    -ms-flex-pack: start;
+  } @else {
+    -ms-flex-pack: $justify-content;
+  }
+}
+
+@mixin flex-align-items($align-items) {
+  align-items: $align-items;
+  -webkit-align-items: $align-items;
+
+  @if($align-items == flex-end) {
+    -ms-flex-align: end;
+  } @else if($align-items == flex-start) {
+    -ms-flex-align: start;
+  } @else {
+    -ms-flex-align: $align-items;
+  }
+}
+
+@mixin flex-align-self($align-self) {
+  align-self: $align-self;
+  -webkit-align-self: $align-self;
+
+  @if($align-self == flex-start) {
+    -ms-flex-item-align: start;
+  } @else if($align-self == flex-end) {
+    -ms-flex-item-align: end;
+  } @else {
+    -ms-flex-item-align: $align-self;
+  }
+}
+
+@mixin flex-position($align-items, $justify-content) {
+  @include display-flex();
+  @include flex-justify-content($justify-content);
+  @include flex-align-items($align-items);
+}
+
+@mixin flex($flex-grow: 1, $flex-shrink: null, $flex-basis: null) {
+  $fg-boxflex: $flex-grow;
+
+  @if type-of($flex-grow) == 'list' {
+    $fg-boxflex: nth($flex-grow, 1);
+  }
+
+  -webkit-box-flex: $fg-boxflex;
+  -webkit-flex: $flex-grow $flex-shrink $flex-basis;
+  -moz-box-flex: $fg-boxflex;
+  -moz-flex: $flex-grow $flex-shrink $flex-basis;
+  -ms-flex: $flex-grow $flex-shrink $flex-basis;
+  flex: $flex-grow $flex-shrink $flex-basis;
+}
+
+// Vendor specific rules
+// IE10, IE11, Edge
+@mixin ie-only() {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) { @content; }
+}
+
+// Firefox
+@mixin ff-only() {
+  @-moz-document url-prefix() { @content; }
+}

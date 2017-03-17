@@ -1,0 +1,418 @@
+$grid-sort-indicator-width: rem-calc(5);
+
+.grid {
+  position: relative;
+
+  &.is-loading {
+    &:after {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      content: ' ';
+      background-color: rgba(200, 200, 200, 0.5);
+      z-index: 200;
+    }
+  }
+
+  .grid-header {
+    @include display-flex();
+
+    .grid-title-column {
+      position: relative;
+      padding: rem-calc(20 15);
+      width: 100%;
+      background-color: $neutral-4;
+      color: $white;
+      font-family: $main-font-family;
+      border-left: 1px solid $neutral-8;
+
+      &:first-child {
+        border-left: 0;
+      }
+
+      & > div {
+        display: inline-block;
+      }
+    }
+  }
+
+  .grid-row {
+    @include display-flex();
+
+    &:nth-child(odd) {
+      background-color: $neutral-5;
+    }
+
+    &:nth-child(even) {
+      background-color: $neutral-3;
+    }
+
+    &.editing {
+      background-color: $white;
+      min-height: rem-calc(80);
+      border: 1px solid $neutral-2;
+
+      .actions {
+        @include display-flex();
+        @include flex-align-items(flex-end);
+      }
+    }
+
+    .grid-column {
+      padding: rem-calc(10 15);
+
+      &.width-1 {
+        width: 100%;
+      }
+
+      &.width-2 {
+        width: 50%;
+      }
+
+      &.width-3 {
+        width: 33.33%;
+      }
+
+      &.width-4 {
+        width: 25%;
+      }
+
+      &.width-5 {
+        width: 20%;
+      }
+
+      &.width-6 {
+        width: 16.66%;
+      }
+
+      &.width-7 {
+        width: 14.28%;
+      }
+
+      &.width-8 {
+        width: 12.5%;
+      }
+
+      &.width-9 {
+        width: 11.11%;
+      }
+
+      &.width-10 {
+        width: 10%;
+      }
+
+      &.no-edit {
+        font-family: $main-font-family;
+        weight: $font-weight-bold;
+      }
+
+      select,
+      input[type='text'] {
+        width: 100%;
+      }
+
+      input[type='checkbox'] {
+        @include up-checkbox(rem-calc(25), rem-calc(14), $main-foreground, $white);
+      }
+
+      .glyphicon-ok {
+        color: $main-foreground;
+      }
+
+      .composite-dropdowns {
+        select {
+          display: block;
+          margin-bottom: rem-calc(10);
+        }
+      }
+    }
+
+    .save-button, .cancel-button {
+      color: $white;
+      border: none;
+      letter-spacing: 1px;
+      padding: rem-calc(10);
+
+      .caption {
+        text-transform: uppercase;
+        font-family: $main-font-family;
+        font-size: rem-calc(14);
+      }
+
+      &:disabled {
+        opacity: 0.5;
+      }
+    }
+
+    .save-button {
+      background-color: $main-foreground;
+
+      &:hover, &:focus {
+        background-color: $lighter-foreground;
+      }
+    }
+
+    .cancel-button {
+      background-color: $neutral-4;
+
+      &:hover, &:focus {
+        background-color: $neutral-2;
+      }
+    }
+
+    .action-button {
+      background: transparent;
+      border: 1px solid transparent;
+      color: $main-foreground;
+      padding: rem-calc(0 10);
+      outline: none;
+
+      .caption {
+        text-transform: uppercase;
+        font-family: $main-font-family;
+        font-size: rem-calc(14);
+        letter-spacing: 1px;
+        display: inline-block;
+        float: left;
+        margin-top: rem-calc(4);
+        margin-right: rem-calc(7);
+      }
+
+      &:hover, &:focus {
+        color: $lighter-foreground;
+      }
+    }
+  }
+
+  .sorting-indicator {
+    position: absolute;
+    cursor: pointer;
+    right: 0;
+    width: rem-calc(20);
+    height: rem-calc(8);
+
+    &:before {
+      position: absolute;
+      content: ' ';
+      cursor: pointer;
+      border-left: $grid-sort-indicator-width solid transparent;
+      border-right: $grid-sort-indicator-width solid transparent;
+    }
+
+    &.asc {
+      &:before {
+        border-bottom: $grid-sort-indicator-width solid $neutral-8;
+      }
+    }
+
+    &.desc {
+      top: rem-calc(30);
+
+      &:before {
+        border-top: $grid-sort-indicator-width solid $neutral-8;
+      }
+    }
+
+    &.active {
+      &.asc {
+        &:before {
+          border-bottom: $grid-sort-indicator-width solid $white;
+        }
+      }
+
+      &.desc {
+        &:before {
+          border-top: $grid-sort-indicator-width solid $white;
+        }
+      }
+    }
+  }
+
+  .grid-footer {
+    @include display-flex();
+    @include flex-justify-content(space-between);
+    padding: rem-calc(15);
+    background-color: $neutral-4;
+    color: $neutral-8;
+    border-top: 1px solid $neutral-8;
+
+    .controls {
+      @include display-flex();
+
+      .prev-page {
+        cursor: pointer;
+        padding-right: rem-calc(15);
+      }
+
+      .next-page {
+        cursor: pointer;
+        padding-left: rem-calc(15);
+      }
+
+      .page-link {
+        cursor: pointer;
+        padding: 0 rem-calc(10);
+
+        &:hover {
+          color: $white;
+        }
+
+        &.first-link {
+          &:after {
+            position: relative;
+            content: '...';
+            margin-left: rem-calc(15);
+          }
+        }
+
+        &.last-link {
+          &:before {
+            position: relative;
+            content: '...';
+            margin-right: rem-calc(15);
+          }
+        }
+
+        &.active {
+          position: relative;
+          color: $white;
+
+          &:before {
+            position: absolute;
+            content: ' ';
+            width: 60%;
+            height: 1px;
+            background-color: $white;
+            bottom: rem-calc(-7);
+            left: 20%;
+          }
+        }
+      }
+    }
+  }
+
+  .load-more {
+    display: none;
+  }
+
+  @include breakpoint(medium only) {
+    .grid-column {
+      &.actions {
+        & > span {
+          display: block;
+          margin: 0 rem-calc(-15);
+
+          .action-button {
+            display: block;
+            padding: 0 10%;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(small only) {
+    padding-top: rem-calc(60);
+
+    .grid-header {
+      display: none;
+    }
+
+    .grid-row {
+      @include flex-direction(column);
+      margin-bottom: rem-calc(20);
+      padding: rem-calc(5);
+      background-color: $neutral-5 !important;
+
+      .grid-column {
+        padding: rem-calc(4 15);
+
+        &.width-1 {
+          width: 100%;
+        }
+
+        &.width-2 {
+          width: 100%;
+        }
+
+        &.width-3 {
+          width: 100%;
+        }
+
+        &.width-4 {
+          width: 100%;
+        }
+
+        &.width-5 {
+          width: 100%;
+        }
+
+        &.width-6 {
+          width: 100%;
+        }
+
+        &.width-7 {
+          width: 100%;
+        }
+
+        &.width-8 {
+          width: 100%;
+        }
+
+        &.width-9 {
+          width: 100%;
+        }
+
+        &.width-10 {
+          width: 100%;
+        }
+
+        &.actions {
+          padding: rem-calc(10 15);
+          margin-top: rem-calc(15);
+        }
+      }
+
+      .global-caption {
+        font-size: rem-calc(13);
+        color: $secondary-foreground;
+        margin-top: rem-calc(12);
+      }
+
+      .grid-check {
+        margin-left: rem-calc(5) !important;
+      }
+
+      .actions {
+        border-top: 1px solid $neutral-8;
+
+        & > span {
+          @include display-flex();
+          @include flex-justify-content(space-between);
+        }
+      }
+    }
+
+    .grid-footer {
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .controls {
+        display: none;
+      }
+    }
+
+    .load-more {
+      display: block;
+      border: 1px solid $main-foreground;
+      padding: rem-calc(10 20);
+      text-transform: uppercase;
+      text-align: center;
+      color: $main-foreground;
+      cursor: pointer;
+    }
+  }
+}

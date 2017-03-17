@@ -5,3 +5,9 @@
 @import 'foundation/foundation'; //Foundation
 
 @include foundation-everything();
+
+@import 'global';
+@import 'mixins';
+
+@import 'components/grid';
+@import 'features/standings';

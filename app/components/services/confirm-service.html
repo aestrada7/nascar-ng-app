@@ -1,0 +1,28 @@
+<div class="confirm-modal" ng-class="options.addClass">
+  <div class="overlay-bg"></div>
+  <div class="overlay flex-center">
+    <div class="overlay-wrap">
+      <div class="overlay-header">
+        <div class="title" ng-if="options.title">
+          <h5>{{options.title}}</h5>
+        </div>
+        <a class="btn-close" href="" ng-click="dismiss();">
+          <i class="fa fa-times"></i>
+        </a>
+      </div>
+      <div class="overlay-content">
+        <div class="support-custom-overlay-wrap">
+          {{options.content}}
+          <div class="buttons-wrapper">
+            <a ng-if="options.confirmLabel" href="" class="btn btn-close dialog" ng-click="confirmAction();">
+              <span>{{options.confirmLabel}}</span>
+            </a>
+            <a ng-if="options.cancelLabel" href="" class="btn btn-close dialog" ng-click="dismiss();">
+              <span>{{options.cancelLabel}}</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

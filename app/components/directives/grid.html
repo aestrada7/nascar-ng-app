@@ -1,0 +1,83 @@
+<div class="grid" ng-class="{'is-loading': loading}">
+  <div class="grid-header">
+    <div class="grid-title-column" ng-repeat="field in fieldDefinition | filter: {kind: '!hidden'}">
+      <span>{{field.caption}}</span>
+      <div class="sorting-indicator asc" ng-if="field.sortable" ng-click="sortGrid(field.property, field.kind, 'ASC');"
+           ng-class="{'active': sortingBy.field === field.property && sortingBy.direction === 'ASC'}"
+           data-field="{{field.property}}">&nbsp;</div>
+      <div class="sorting-indicator desc" ng-if="field.sortable" ng-click="sortGrid(field.property, field.kind, 'DESC');"
+           ng-class="{'active': sortingBy.field === field.property && sortingBy.direction === 'DESC'}"
+           data-field="{{field.property}}">&nbsp;</div>
+    </div>
+  </div>
+  <div class="grid-content">
+    <div class="grid-row" ng-repeat="gridRow in gridProvider | limitTo: currentLimit() : currentStart()"
+         ng-class="{'editing': gridRow.editing}">
+      <div class="grid-column width-{{columnWidth}}" ng-class="field.kind" ng-repeat="field in fieldDefinition | filter: {kind: '!hidden'}">
+        <!-- Editing Grid Values -->
+        <div ng-if="field.kind !== 'actions' && gridRow.editing">
+          <div ng-switch="field.kind">
+            <input ng-switch-default type="text" ng-model="gridRow[field.property]" ng-disabled="isDisabled(field.property);" />
+            <div ng-switch-when="check">
+              <div class="global-caption" ng-if="isMobile && field.globalCaption">{{field.globalCaption}}</div>
+              <span ng-if="isMobile && field.mobileCaption">{{field.mobileCaption}}</span>
+              <input type="checkbox" class="grid-check" ng-model="gridRow[field.property]" ng-disabled="isDisabled(field.property);" />
+            </div>
+            <div ng-switch-when="composite-option" class="composite-dropdowns">
+              <div class="global-caption" ng-if="isMobile && field.globalCaption">{{field.globalCaption}}</div>
+              <select ng-repeat="dropdown in field.dropdowns" ng-model="gridRow[dropdown.property]">
+                <option ng-repeat="value in dropdown.values" ng-select="gridRow[dropdown.property] === value" value="{{value}}">{{dropdown.captions[$index]}}</option>
+              </select>
+            </div>
+            <span ng-switch-when="no-edit">{{gridRow[field.property]}}</span>
+          </div>
+        </div>
+        <!-- Showing Grid Values -->
+        <span ng-if="field.kind !== 'actions' && !gridRow.editing">
+          <div ng-switch="field.kind">
+            <div ng-switch-default>{{gridRow[field.property]}}</div>
+            <div ng-switch-when="check" ng-if="gridRow[field.property] || isMobile">
+              <div class="global-caption" ng-if="isMobile && field.globalCaption">{{field.globalCaption}}</div>
+              <span ng-if="isMobile && field.mobileCaption">{{field.mobileCaption}}</span>
+              <span ng-if="gridRow[field.property]" class='grid-check glyphicon glyphicon-ok'></span>
+            </div>
+            <div ng-switch-when="composite-option">
+              <div class="global-caption" ng-if="isMobile && field.globalCaption && printComposite(gridRow, field)">{{field.globalCaption}}</div>
+              <span>{{printComposite(gridRow, field)}}</span>
+            </div>
+            <div ng-switch-when="image">
+              <driver-image id="gridRow[field.property]" season="field.season" team="" infer="yes"></driver-image>
+            </div>
+          </div>
+        </span>
+        <span ng-if="field.kind === 'actions'">
+          <button class="action-button" ng-if="!gridRow.editing" ng-repeat="action in field.actions"
+                  ng-click="runAction(gridRow[idField], action.action, action.url);">
+            <span class="caption">{{action.caption}}</span>
+            <span ng-if="action.icon" class='glyphicon {{action.icon}}'></span>
+          </button>
+          <button class="save-button" ng-if="gridRow.editing" ng-click="saveEdit(gridRow);">
+            <span class="caption">{{strings.save}}</span>
+          </button>
+          <button class="cancel-button" ng-if="gridRow.editing" ng-click="cancelEdit(gridRow);">
+            <span class="caption">{{strings.cancel}}</span>
+          </button>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="load-more" ng-if="currentPage !== totalPages && totalRows !== 0">
+    <div ng-click="toNextPage();">{{strings.loadMore}}</div>
+  </div>
+  <div class="grid-footer">
+    <div class="item-count">{{gridSummary}}</div>
+    <div class="controls" ng-if="totalPages !== 0">
+      <div class="prev-page" ng-click="toPrevPage();" ng-hide="currentPage === 1">&lt;&nbsp;{{strings.previous}}</div>
+      <div class="page-link first-link" ng-click="goToPage(1);" ng-hide="pageIsVisible(1);">1</div>
+      <div class="page-link" ng-class="{'active': currentPage === page}" ng-click="goToPage(page);"
+           ng-repeat="page in footerPages">{{page}}</div>
+      <div class="page-link last-link" ng-click="goToPage(totalPages);" ng-hide="pageIsVisible(totalPages);">{{totalPages}}</div>
+      <div class="next-page" ng-click="toNextPage();" ng-hide="currentPage === totalPages">{{strings.next}}&nbsp;&gt;</div>
+    </div>
+  </div>
+</div>

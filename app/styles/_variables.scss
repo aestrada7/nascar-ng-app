@@ -1,0 +1,22 @@
+//Fonts
+$main-font-family: 'Vito TE';
+$font-weight-bold: 900;
+
+//Colors
+$black: #000;
+$white: #fff;
+$blue: #007db8;
+$orange: #f26a21;
+
+$neutral-1: $black;
+$neutral-2: #444;
+$neutral-3: #dedede;
+$neutral-4: #575757;
+$neutral-5: #f5f5f5;
+$neutral-6: $white;
+$neutral-7: #222;
+$neutral-8: #bababa;
+
+$main-foreground: $orange;
+$lighter-foreground: lighten($main-foreground, 15%);
+$secondary-foreground: $neutral-7;
