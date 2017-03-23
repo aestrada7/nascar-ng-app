@@ -1,14 +1,15 @@
 (function() {
   'use strict';
 
-  function ChampionshipCtrl($scope, $rootScope, staticDataService) {
+  function ChampionshipCtrl($scope, $rootScope, staticDataService, pointSystemService) {
     $scope.driverList = {};
     $scope.fieldDefinition = [
       { 'property': 'id', 'kind': 'hidden' },
       { 'property': 'image', 'kind': 'image', 'caption': 'Number', 'season': $rootScope.season },
       { 'property': 'name', 'kind': 'no-edit', 'caption': 'Name' },
       { 'property': 'lastname', 'kind': 'no-edit', 'caption': 'Lastname' },
-      { 'property': 'currentPoints', 'kind': 'no-edit', 'caption': 'Points' },
+      { 'property': 'races', 'kind': 'no-edit', 'caption': 'Races' },
+      { 'property': 'points', 'kind': 'no-edit', 'caption': 'Points' },
       { 'property': 'playoffPoints', 'kind': 'no-edit', 'caption': 'Playoff Points' },
       { 'property': 'wins', 'kind': 'no-edit', 'caption': 'Wins' },
       { 'property': 'top5s', 'kind': 'no-edit', 'caption': 'Top 5s' },
@@ -21,16 +22,15 @@
         $scope.driverList = response;
 
         staticDataService.call('./data/' + $rootScope.season + '/races.json').then(function(racesResponse) {
-          raceData = racesResponse;
+          var raceData = racesResponse;
 
           angular.forEach($scope.driverList, function(item) {
             item.image = item.id;
-            item.currentPoints = 0;
-            item.playoffPoints = 0;
-            item.wins = 0;
-            item.top5s = 0;
-            item.top10s = 0;
-            item.lapsLed = 0;
+            pointSystemService.calculate(item.id, raceData, $rootScope.pointSystem, $rootScope.showAt).then(function(racePointsResponse) {
+              for(var key in racePointsResponse) {
+                item[key] = racePointsResponse[key];
+              }
+            }, function(reject) {});
           });
         });
       });
@@ -39,7 +39,7 @@
     init();
   }
 
-  ChampionshipCtrl.$inject = ['$scope', '$rootScope', 'staticDataService'];
+  ChampionshipCtrl.$inject = ['$scope', '$rootScope', 'staticDataService', 'pointSystemService'];
 
   angular.module('nascar-app').controller('ChampionshipCtrl', ChampionshipCtrl);
 }());

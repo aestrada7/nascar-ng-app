@@ -13,26 +13,22 @@
       { "team":  "2", "driver": "keselb" },
       { "team": "20", "driver": "kensem" },
       { "team":  "6", "driver": "baynet" },
-      { "team": "78", "driver": "truexm" },
       { "team": "43", "driver": "almira" },
       { "team": "22", "driver": "loganj" },
-      { "team": "72", "driver": "whittc" }
+      { "team": "72", "driver": "whittc" },
+      { "team": "19", "driver": "suared" }
     ],
     "stage-2": [
       { "team": "11", "driver": "hamlid" },
       { "team": "14", "driver": "bowyec" },
       { "team": "41", "driver": "buschk" },
-      { "team": "47", "driver": "allmea" },
       { "team":  "3", "driver": "dilloa" },
       { "team": "88", "driver": "earnhd" },
       { "team": "10", "driver": "patrid" },
       { "team": "31", "driver": "newmar" },
       { "team": "42", "driver": "larsok" },
-      { "team": "13", "driver": "dillot" }
-    ],
-    "penalizations": [
-      { "team": "78", "deduction": "4" },
-      { "team": "47", "deduction": "7" }
+      { "team": "13", "driver": "dillot" },
+      { "team": "38", "driver": "ragand" }
     ]
   },
   {
@@ -335,6 +331,10 @@
       { "team": "21", "driver": "blaner" },
       { "team": "11", "driver": "hamlid" },
       { "team":  "4", "driver": "harvik" }
+    ],
+    "penalizations": [
+      { "team": "2", "deduction": "35" },
+      { "team": "4", "deduction": "10" }
     ]
   },
   {
