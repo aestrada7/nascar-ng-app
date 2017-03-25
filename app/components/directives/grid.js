@@ -2,7 +2,7 @@
   'use strict';
 
   function grid($rootScope, $http, $q, orderBy, confirmService) {
-    function gridCtrl($scope, $element, $attrs, $rootScope, $http, $q, orderBy, confirmService, $window) {
+    function gridCtrl($scope, $element, $attrs, $rootScope, $http, $q, orderBy, confirmService, $window, $timeout) {
       var MOBILE_BREAKPOINT = 640;
 
       $scope.totalPages = 0;
@@ -326,6 +326,14 @@
         angular.forEach($scope.fieldDefinition, function(item) {
           item.sortable = item.kind === 'string' || item.kind === 'number' || item.kind === 'no-edit';
           item.editing = false;
+
+          if(item.order) {
+            item.order = false;
+
+            $timeout(function() {
+              $scope.sortGrid(item.property, item.kind, 'ASC');
+            }, 500);
+          }
         });
 
         $scope.totalRows = $scope.gridProvider.length;
@@ -487,7 +495,7 @@
       $scope.init();
     }
 
-    gridCtrl.$inject = ['$scope', '$element', '$attrs', '$rootScope', '$http', '$q', 'orderByFilter', 'confirmService', '$window'];
+    gridCtrl.$inject = ['$scope', '$element', '$attrs', '$rootScope', '$http', '$q', 'orderByFilter', 'confirmService', '$window', '$timeout'];
 
     return {
       scope: {

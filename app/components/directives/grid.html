@@ -48,6 +48,9 @@
             <div ng-switch-when="image">
               <driver-image id="gridRow[field.property]" season="field.season" team="" infer="yes"></driver-image>
             </div>
+            <div ng-switch-when="ordering">
+              <span>{{gridProvider.indexOf(gridRow) + 1}}</span>
+            </div>
           </div>
         </span>
         <span ng-if="field.kind === 'actions'">

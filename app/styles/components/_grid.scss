@@ -103,6 +103,10 @@ $grid-sort-indicator-width: rem-calc(5);
         width: 10%;
       }
 
+      &.width-11 {
+        width: 9.09%;
+      }
+
       &.no-edit {
         font-family: $main-font-family;
         weight: $font-weight-bold;
@@ -366,6 +370,10 @@ $grid-sort-indicator-width: rem-calc(5);
         }
 
         &.width-10 {
+          width: 100%;
+        }
+
+        &.width-11 {
           width: 100%;
         }
 

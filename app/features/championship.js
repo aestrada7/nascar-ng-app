@@ -5,16 +5,17 @@
     $scope.driverList = {};
     $scope.fieldDefinition = [
       { 'property': 'id', 'kind': 'hidden' },
+      { 'property': 'position', 'kind': 'ordering', 'caption': '#' },
       { 'property': 'image', 'kind': 'image', 'caption': 'Number', 'season': $rootScope.season },
       { 'property': 'name', 'kind': 'no-edit', 'caption': 'Name' },
       { 'property': 'lastname', 'kind': 'no-edit', 'caption': 'Lastname' },
       { 'property': 'races', 'kind': 'no-edit', 'caption': 'Races' },
-      { 'property': 'points', 'kind': 'no-edit', 'caption': 'Points' },
+      { 'property': 'points', 'kind': 'no-edit', 'caption': 'Points', 'order': true },
       { 'property': 'playoffPoints', 'kind': 'no-edit', 'caption': 'Playoff Points' },
       { 'property': 'wins', 'kind': 'no-edit', 'caption': 'Wins' },
       { 'property': 'top5s', 'kind': 'no-edit', 'caption': 'Top 5s' },
       { 'property': 'top10s', 'kind': 'no-edit', 'caption': 'Top 10s' },
-      { 'property': 'lapsLed', 'kind': 'no-edit', 'caption': 'Laps Led' }
+      { 'property': 'lapsLed', 'kind': 'no-edit', 'caption': 'Laps Led' },
     ];
 
     var init = function() {
