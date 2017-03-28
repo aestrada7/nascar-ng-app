@@ -16,7 +16,8 @@
        **/
       var calculate = function(driverId, raceData, pointSystem, showAt) {
         var defer = $q.defer();
-        var obj = { 'races': 0, 'points': 0, 'playoffPoints': 0, 'wins': 0, 'top5s': 0, 'top10s': 0, 'lapsLed': 0, 'detail': [] };
+        var obj = { 'races': 0, 'points': 0, 'playoffPoints': 0, 'wins': 0, 'top5s': 0, 'top10s': 0, 'lapsLed': 0, 
+                    'average': 0, 'detail': [] };
         var raceDeduction = 0;
 
         angular.forEach(raceData, function(race, raceIdx) {
@@ -35,7 +36,9 @@
                         obj.points = obj.points - raceDeduction;
                       }
                     }
-                    obj.detail.push({ 'event-number': race['event-number'], 'race': race['event-name'],
+                    obj.detail.push({ 'event-number': race['event-number'],
+                                      'race': race['event-name'],
+                                      'position': index + 1,
                                       'points': MONSTER_CUP_POINTS[index] - raceDeduction,
                                       'fullPoints': MONSTER_CUP_POINTS[index] - raceDeduction });
                   }
@@ -57,6 +60,14 @@
                 }
               }
             });
+
+            //Average
+            var avg = 0;
+            for(var res in obj.detail) {
+              avg += obj.detail[res].position;
+            }
+            avg = avg / obj.detail.length;
+            obj.average = parseFloat(avg.toFixed(2));
 
             //Stages
             if(pointSystem === SYSTEM_MONSTER_CUP) {
@@ -86,7 +97,6 @@
           }
         });
 
-        console.log(obj);
         defer.resolve(obj);
 
         return defer.promise;
