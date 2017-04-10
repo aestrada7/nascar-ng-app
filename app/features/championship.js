@@ -50,6 +50,10 @@
     };
 
     init();
+
+    $scope.refresh = function() {
+      init();
+    };
   }
 
   ChampionshipCtrl.$inject = ['$scope', '$rootScope', 'staticDataService', 'pointSystemService'];

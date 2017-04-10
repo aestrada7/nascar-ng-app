@@ -6,6 +6,9 @@
   <body>
     <!--move to it's own file later-->
     <div class="standings" ng-controller="ChampionshipCtrl">
+      Point System:
+      <select ng-options="a for a in $root.pointSystems" ng-model="$root.pointSystem" ng-change="refresh();"></select>
+
       <grid rows-per-page="10" grid-provider="driverList" 
             field-definition="fieldDefinition" id-field="id"
             strings="{ 'itemCount': 'Showing %%0 - %%1 of %%2',
