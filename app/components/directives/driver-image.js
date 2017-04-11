@@ -36,6 +36,7 @@
 
           for(team in teams) {
             if(teams[team] > appearances) {
+              appearances = teams[team];
               $scope.team = team.split('team-').join('');
             }
           }
