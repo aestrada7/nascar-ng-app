@@ -5,6 +5,7 @@
     $scope.driverList = {};
     $scope.fieldDefinition = [
       { 'property': 'id', 'kind': 'hidden' },
+      { 'property': 'previousPoints', 'kind': 'hidden' },
       { 'property': 'position', 'kind': 'ordering', 'caption': '#' },
       { 'property': 'image', 'kind': 'image', 'caption': 'Number', 'season': $rootScope.season },
       { 'property': 'name', 'kind': 'no-edit', 'caption': 'Name' },

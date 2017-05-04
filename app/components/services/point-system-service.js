@@ -22,12 +22,12 @@
       /**
        * Builds points according to the selected point system.
        **/
-      var buildPoints = function(result, race, obj, index, pointSystemArray) {
+      var buildPoints = function(result, race, obj, position, pointSystemArray) {
         var raceDeduction = 0;
         var ledLapModifiers = 0;
 
         if(!result.dnq) {
-          obj.points += pointSystemArray[index];
+          obj.points += pointSystemArray[position];
           obj.races++;
           obj.lapsLed += result.led;
           raceDeduction = 0;
@@ -64,20 +64,20 @@
 
           obj.detail.push({ 'event-number': race['event-number'],
                             'race': race['event-name'],
-                            'position': index + 1,
-                            'points': pointSystemArray[index] + ledLapModifiers - raceDeduction,
-                            'fullPoints': pointSystemArray[index] + ledLapModifiers - raceDeduction });
+                            'position': position + 1,
+                            'points': pointSystemArray[position] + ledLapModifiers - raceDeduction,
+                            'fullPoints': pointSystemArray[position] + ledLapModifiers - raceDeduction });
         }
-        if(index === 0) {
+        if(position === 0) {
           obj.wins++;
           if(pointSystemArray === MONSTER_CUP_POINTS) {
             obj.playoffPoints += 5;
           }
         }
-        if(index <= 4) {
+        if(position <= 4) {
           obj.top5s++;
         }
-        if(index <= 9) {
+        if(position <= 9) {
           obj.top10s++;
         }
       }
@@ -88,7 +88,7 @@
       var calculate = function(driverId, raceData, pointSystem, showAt) {
         var defer = $q.defer();
         var obj = { 'races': 0, 'points': 0, 'playoffPoints': 0, 'wins': 0, 'top5s': 0, 'top10s': 0, 'lapsLed': 0, 
-                    'average': 0, 'detail': [] };
+                    'average': 0, 'previousPoints': 0, 'duelPoints': 0, 'detail': [] };
 
         angular.forEach(raceData, function(race, raceIdx) {
           if(showAt === 'ALL' || raceIdx < showAt) {
@@ -98,7 +98,6 @@
                   buildPoints(result, race, obj, index, MONSTER_CUP_POINTS);
                 } else if(pointSystem === SYSTEM_STAGE_CHASE) {
                   buildPoints(result, race, obj, index, STAGE_CHASE_POINTS);
-                  if(driverId == "larsok") console.log(obj);
                 } else if(pointSystem === SYSTEM_WINSTON_CUP) {
                   buildPoints(result, race, obj, index, WINSTON_CUP_POINTS);
                 } else {
@@ -121,6 +120,10 @@
                 if(stage1.driver === driverId) {
                   obj.points = obj.points + MONSTER_STAGE_POINTS[index];
 
+                  if(parseInt(race['event-number']) === 0) {
+                    obj.duelPoints = MONSTER_STAGE_POINTS[index]
+                  }
+
                   if(index === 0) {
                     obj.playoffPoints += 1;
                   }
@@ -137,6 +140,10 @@
                 if(stage2.driver === driverId) {
                   obj.points = obj.points + MONSTER_STAGE_POINTS[index];
 
+                  if(parseInt(race['event-number']) === 0) {
+                    obj.duelPoints = MONSTER_STAGE_POINTS[index]
+                  }
+
                   if(index === 0) {
                     obj.playoffPoints += 1;
                   }
@@ -152,6 +159,15 @@
             }
           }
         });
+
+        //Previous Points
+        obj.previousPoints = obj.duelPoints;
+        if(obj.detail.length > 0) {
+          if(driverId == 'larsok') console.log(obj);
+          for(var k = 0; k < obj.detail.length - 1; k++) {
+            obj.previousPoints += obj.detail[k].fullPoints;
+          }
+        }
 
         defer.resolve(obj);
 
