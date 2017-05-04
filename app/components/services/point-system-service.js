@@ -71,7 +71,7 @@
         if(position === 0) {
           obj.wins++;
           if(pointSystemArray === MONSTER_CUP_POINTS) {
-            obj.playoffPoints += 5;
+            if(!result.encumbered) obj.playoffPoints += 5;
           }
         }
         if(position <= 4) {

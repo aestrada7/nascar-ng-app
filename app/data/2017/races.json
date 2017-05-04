@@ -642,7 +642,7 @@
     "winner": "loganj",
     "pole-winner": "kensem",
     "results": [
-      { "team": "22", "led":  25, "driver": "loganj" },
+      { "team": "22", "led":  25, "driver": "loganj", "encumbered": true },
       { "team":  "2", "led": 110, "driver": "keselb" },
       { "team": "11", "led":  59, "driver": "hamlid" },
       { "team": "17", "led":   0, "driver": "stenhr" },
@@ -704,6 +704,9 @@
       { "team": "14", "driver": "bowyec" },
       { "team": "13", "driver": "dillot" },
       { "team": "22", "driver": "loganj" }
+    ],
+    "penalizations": [
+      { "team": "22", "deduction": "25", "place-deduction": "12" }
     ]
   },
   {
