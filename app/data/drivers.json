@@ -327,5 +327,12 @@
     "lastname": "Long",
     "hometown": "Roxboro, NC",
     "country": 1
+  },
+  {
+    "id": "smithr",
+    "name": "Regan",
+    "lastname": "Smith",
+    "hometown": "Cato, NY",
+    "country": 1
   }
 ]

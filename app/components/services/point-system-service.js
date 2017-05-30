@@ -6,6 +6,7 @@
       const SYSTEM_WINSTON_CUP = '2003';
       const SYSTEM_STAGE_CHASE = '2014';
       const SYSTEM_MONSTER_CUP = '2017';
+      const STAGE_MAX = 3;
 
       const MONSTER_CUP_POINTS = [40, 35, 34, 33, 32, 31, 30, 29, 28, 27, 26, 25, 24, 23, 22, 21, 20, 19, 18, 17,
                                   16, 15, 14, 13, 12, 11, 10,  9,  8,  7,  6,  5,  4,  3,  2,  1,  1,  1,  1,  1];
@@ -64,6 +65,7 @@
 
           obj.detail.push({ 'event-number': race['event-number'],
                             'race': race['event-name'],
+                            'track': race['track'],
                             'position': position + 1,
                             'points': pointSystemArray[position] + ledLapModifiers - raceDeduction,
                             'fullPoints': pointSystemArray[position] + ledLapModifiers - raceDeduction });
@@ -116,46 +118,28 @@
 
             //Stages
             if(pointSystem === SYSTEM_MONSTER_CUP) {
-              angular.forEach(race['stage-1'], function(stage1, index) {
-                if(stage1.driver === driverId) {
-                  obj.points = obj.points + MONSTER_STAGE_POINTS[index];
+              for(var stageNumber = 1; stageNumber <= STAGE_MAX; stageNumber++) {
+                angular.forEach(race['stage-' + stageNumber], function(stage, index) {
+                  if(stage.driver === driverId) {
+                    obj.points = obj.points + MONSTER_STAGE_POINTS[index];
 
-                  if(parseInt(race['event-number']) === 0) {
-                    obj.duelPoints = MONSTER_STAGE_POINTS[index]
-                  }
+                    if(parseInt(race['event-number']) === 0) {
+                      obj.duelPoints = MONSTER_STAGE_POINTS[index];
+                    }
 
-                  if(index === 0) {
-                    obj.playoffPoints += 1;
-                  }
+                    if(index === 0) {
+                      obj.playoffPoints += 1;
+                    }
 
-                  for(var k in obj.detail) {
-                    if(obj.detail[k]['event-number'] === race['event-number']) {
-                      obj.detail[k]['stage-1'] = MONSTER_STAGE_POINTS[index];
-                      obj.detail[k].fullPoints = obj.detail[k].fullPoints + obj.detail[k]['stage-1'];
+                    for(var k in obj.detail) {
+                      if(obj.detail[k]['event-number'] === race['event-number']) {
+                        obj.detail[k]['stage-' + stageNumber] = MONSTER_STAGE_POINTS[index];
+                        obj.detail[k].fullPoints = obj.detail[k].fullPoints + obj.detail[k]['stage-' + stageNumber];
+                      }
                     }
                   }
-                }
-              });
-              angular.forEach(race['stage-2'], function(stage2, index) {
-                if(stage2.driver === driverId) {
-                  obj.points = obj.points + MONSTER_STAGE_POINTS[index];
-
-                  if(parseInt(race['event-number']) === 0) {
-                    obj.duelPoints = MONSTER_STAGE_POINTS[index]
-                  }
-
-                  if(index === 0) {
-                    obj.playoffPoints += 1;
-                  }
-
-                  for(var k in obj.detail) {
-                    if(obj.detail[k]['event-number'] === race['event-number']) {
-                      obj.detail[k]['stage-2'] = MONSTER_STAGE_POINTS[index];
-                      obj.detail[k].fullPoints = obj.detail[k].fullPoints + obj.detail[k]['stage-2'];
-                    }
-                  }
-                }
-              });
+                });
+              }
             }
           }
         });
@@ -163,7 +147,7 @@
         //Previous Points
         obj.previousPoints = obj.duelPoints;
         if(obj.detail.length > 0) {
-          if(driverId == 'larsok') console.log(obj);
+          if(driverId == 'harvik') console.log(obj);
           for(var k = 0; k < obj.detail.length - 1; k++) {
             obj.previousPoints += obj.detail[k].fullPoints;
           }
