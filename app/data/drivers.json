@@ -348,5 +348,12 @@
     "lastname": "Sieg",
     "hometown": "Tucker, GA",
     "country": 1
+  },
+  {
+    "id": "wallad",
+    "name": "Darrell",
+    "lastname": "Wallace, Jr.",
+    "hometown": "Mobile, AL",
+    "country": 1
   }
 ]
