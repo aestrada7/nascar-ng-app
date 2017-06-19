@@ -6,10 +6,12 @@
 
   app.config(['$locationProvider', '$routeProvider',
     function($locationProvider, $routeProvider) {
-      $locationProvider.html5Mode(true);
+      //$locationProvider.html5Mode(true);
 
       $routeProvider.when('/', {
         templateUrl: 'features/championship/championship.html'
+      }).when('/results', {
+        templateUrl: 'features/results/results.html'
       }).otherwise({
         redirectTo: '/'
       });

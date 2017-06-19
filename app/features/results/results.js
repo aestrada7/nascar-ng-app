@@ -4,21 +4,9 @@
   function ResultsCtrl($scope, $rootScope, staticDataService) {
     $scope.driverList = {};
     $scope.fieldDefinition = [
-      { 'property': 'id', 'kind': 'hidden' },
-      { 'property': 'previousPoints', 'kind': 'hidden' },
-      { 'property': 'position', 'kind': 'ordering', 'caption': '#' },
       { 'property': 'image', 'kind': 'image', 'caption': 'Number', 'season': $rootScope.season },
       { 'property': 'name', 'kind': 'no-edit', 'caption': 'Name' },
-      { 'property': 'lastname', 'kind': 'no-edit', 'caption': 'Lastname' },
-      { 'property': 'races', 'kind': 'no-edit', 'caption': 'Races' },
-      { 'property': 'points', 'kind': 'no-edit', 'caption': 'Points', 'order': true },
-      { 'property': 'pointsToLeader', 'kind': 'no-edit', 'caption': 'To Leader' },
-      { 'property': 'playoffPoints', 'kind': 'no-edit', 'caption': 'Playoff Points' },
-      { 'property': 'wins', 'kind': 'no-edit', 'caption': 'Wins' },
-      { 'property': 'top5s', 'kind': 'no-edit', 'caption': 'Top 5s' },
-      { 'property': 'top10s', 'kind': 'no-edit', 'caption': 'Top 10s' },
-      { 'property': 'average', 'kind': 'no-edit', 'caption': 'Average' },
-      { 'property': 'lapsLed', 'kind': 'no-edit', 'caption': 'Laps Led' },
+      { 'property': 'lastname', 'kind': 'no-edit', 'caption': 'Lastname' }
     ];
 
     var init = function() {
@@ -26,6 +14,12 @@
         $scope.driverList = response;
 
         staticDataService.call('./data/' + $rootScope.season + '/races.json').then(function(racesResponse) {
+          console.log(racesResponse);
+
+          angular.forEach(racesResponse, function(item, index) {
+            $scope.fieldDefinition.push({ 'property': 'event-' + item['event-number'], 'kind': 'no-edit', 'caption': item['short-name'] })            
+          });
+          /*
           var raceData = racesResponse;
           var leaderPoints = 0;
 
@@ -46,6 +40,7 @@
               }
             }, function(reject) {});
           });
+          */
         });
       });
     };
