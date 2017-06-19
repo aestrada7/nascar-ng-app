@@ -2,28 +2,21 @@
   <head>
     <link rel="stylesheet" href="./dist/nascar-ng-app.css" />
     <title>NASCAR Angular App</title>
+    <base href="/" />
   </head>
   <body>
-    <!--move to it's own file later-->
-    <div class="standings" ng-controller="ChampionshipCtrl">
-      Point System:
-      <select ng-options="a for a in $root.pointSystems" ng-model="$root.pointSystem" ng-change="refresh();"></select>
-
-      <grid rows-per-page="10" grid-provider="driverList" 
-            field-definition="fieldDefinition" id-field="id"
-            strings="{ 'itemCount': 'Showing %%0 - %%1 of %%2',
-                       'previous': 'Previous',
-                       'next': 'Next' }"></grid>
-    </div>
+    <div class="main-content" ng-view></div>
     <script src="./vendor/jquery.min.js"></script>
     <script src="./vendor/foundation.min.js"></script>
     <script src="./vendor/angular.min.js"></script>
+    <script src="./vendor/angular-route.min.js"></script>
     <script src="app.js"></script>
     <script src="components/services/static-data.js"></script>
     <script src="components/services/confirm-service.js"></script>
     <script src="components/services/point-system-service.js"></script>
     <script src="components/directives/driver-image.js"></script>
     <script src="components/directives/grid.js"></script>
-    <script src="features/championship.js"></script>
+    <script src="features/championship/championship.js"></script>
+    <script src="features/results/results.js"></script>
   </body>
 </html>

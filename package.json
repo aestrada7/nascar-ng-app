@@ -4,7 +4,8 @@
   "description": "NASCAR App",
   "author": "aestrada7@outlook.com",
   "dependencies": {
-    "angular": "^1.6.1",
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
     "foundation-icons": "^1.0.1",
     "foundation-sites": "^6.3.0"
   },
@@ -15,8 +16,9 @@
     "nodemon": "^1.11.0"
   },
   "scripts": {
-    "copy": "npm run copy:angular && npm run copy:foundation && npm run copy:foundation-icons",
+    "copy": "npm run copy:angular && npm run copy:angular-route && npm run copy:foundation && npm run copy:foundation-icons",
     "copy:angular": "copyfiles -f node_modules/angular/angular.min.js app/vendor && echo Angular Copied",
+    "copy:angular-route": "copyfiles -f node_modules/angular-route/angular-route.min.js app/vendor && echo Angular Router Copied",
     "copy:foundation": "npm run copy:foundation:scss && npm run copy:foundation:js && npm run copy:jquery",
     "copy:foundation:scss": "copyfiles -u 3 node_modules/foundation-sites/scss/**/*.scss app/styles/foundation && copyfiles -u 3 node_modules/foundation-sites/_vendor/**/*.scss app/styles/_vendor && echo Foundation SCSS Copied",
     "copy:foundation:js": "copyfiles -f node_modules/foundation-sites/dist/js/foundation.min.js app/vendor && echo Foundation JS Copied",
