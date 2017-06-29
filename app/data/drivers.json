@@ -355,5 +355,47 @@
     "lastname": "Wallace, Jr.",
     "hometown": "Mobile, AL",
     "country": 1
+  },
+  {
+    "id": "johnsb",
+    "name": "Billy",
+    "lastname": "Johnson",
+    "hometown": "San Clemente, CA",
+    "country": 1
+  },
+  {
+    "id": "saidbo",
+    "name": "Boris",
+    "lastname": "Said",
+    "hometown": "Carlsbad, CA",
+    "country": 1
+  },
+  {
+    "id": "dayalo",
+    "name": "Alon",
+    "lastname": "Day",
+    "hometown": "Ashdod, Israel",
+    "country": 4
+  },
+  {
+    "id": "oconnk",
+    "name": "Kevin",
+    "lastname": "O'Connell",
+    "hometown": "Newport Beach, CA",
+    "country": 1
+  },
+  {
+    "id": "regant",
+    "name": "Tommy",
+    "lastname": "Regan",
+    "hometown": "Tracy, CA",
+    "country": 1
+  },
+  {
+    "id": "bilicj",
+    "name": "Josh",
+    "lastname": "Bilicki",
+    "hometown": "Menominee Falls, WI",
+    "country": 1
   }
 ]
