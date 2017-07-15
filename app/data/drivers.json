@@ -397,5 +397,12 @@
     "lastname": "Bilicki",
     "hometown": "Menominee Falls, WI",
     "country": 1
+  },
+  {
+    "id": "mcleob",
+    "name": "B.J.",
+    "lastname": "McLeod",
+    "hometown": "Wuachula, FL",
+    "country": 1
   }
 ]
