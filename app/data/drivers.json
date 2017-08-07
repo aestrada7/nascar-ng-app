@@ -404,5 +404,26 @@
     "lastname": "McLeod",
     "hometown": "Wuachula, FL",
     "country": 1
+  },
+  {
+    "id": "leichs",
+    "name": "Stephen",
+    "lastname": "Leicht",
+    "hometown": "Asheville, NC",
+    "country": 1
+  },
+  {
+    "id": "kluttg",
+    "name": "Gary",
+    "lastname": "Klutt",
+    "hometown": "Halton Hills, ON",
+    "country": 3
+  },
+  {
+    "id": "moffib",
+    "name": "Brett",
+    "lastname": "Moffitt",
+    "hometown": "Grimes, IA",
+    "country": 1
   }
 ]
