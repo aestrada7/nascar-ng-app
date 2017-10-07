@@ -121,6 +121,12 @@
               for(var stageNumber = 1; stageNumber <= STAGE_MAX; stageNumber++) {
                 angular.forEach(race['stage-' + stageNumber], function(stage, index) {
                   if(stage.driver === driverId) {
+                    var isEncumbered = false;
+                    angular.forEach(race.results, function(result, idx) {
+                      if(result.driver === driverId) {
+                        isEncumbered = result.encumbered;
+                      }
+                    });
                     obj.points = obj.points + MONSTER_STAGE_POINTS[index];
 
                     if(parseInt(race['event-number']) === 0) {
@@ -128,7 +134,7 @@
                     }
 
                     if(index === 0) {
-                      obj.playoffPoints += 1;
+                      if(!isEncumbered) obj.playoffPoints += 1;
                     }
 
                     for(var k in obj.detail) {
