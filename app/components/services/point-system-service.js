@@ -153,7 +153,7 @@
         //Previous Points
         obj.previousPoints = obj.duelPoints;
         if(obj.detail.length > 0) {
-          if(driverId == 'harvik') console.log(obj);
+          if(driverId == 'buschk') console.log(obj);
           for(var k = 0; k < obj.detail.length - 1; k++) {
             obj.previousPoints += obj.detail[k].fullPoints;
           }

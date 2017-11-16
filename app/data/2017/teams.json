@@ -299,5 +299,12 @@
     "make": "Toyota",
     "team": "Gaunt Brothers Racing",
     "sponsor": "Lordco Auto Parts / Castrol"
+  },
+  {
+    "season": "2017",
+    "number": "00",
+    "make": "Chevrolet",
+    "team": "StarCom Racing",
+    "sponsor": "StarCom Fiber"
   }
 ]

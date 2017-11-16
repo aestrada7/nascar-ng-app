@@ -91,7 +91,7 @@
     "country": 1
   },
   {
-    "id": "buschk1",
+    "id": "buscky",
     "name": "Kyle",
     "lastname": "Busch",
     "hometown": "Las Vegas, NV",
@@ -196,7 +196,7 @@
     "country": 1
   },
   {
-    "id": "buschk",
+    "id": "buscku",
     "name": "Kurt",
     "lastname": "Busch",
     "hometown": "Las Vegas, NV",
@@ -432,5 +432,40 @@
     "lastname": "Black, Jr.",
     "hometown": "Palm Coast, FL",
     "country": 1
-  }  
+  },
+  {
+    "id": "thompm",
+    "name": "Mark",
+    "lastname": "Thompson",
+    "hometown": "Catersville, GA",
+    "country": 1
+  },
+  {
+    "id": "marksj",
+    "name": "Justin",
+    "lastname": "Marks",
+    "hometown": "Rocklin, CA",
+    "country": 1
+  },
+  {
+    "id": "sadleh",
+    "name": "Hermie",
+    "lastname": "Sadler",
+    "hometown": "Emporia, VA",
+    "country": 1
+  },
+  {
+    "id": "weathk",
+    "name": "Kyle",
+    "lastname": "Weatherman",
+    "hometown": "Wentzville, MO",
+    "country": 1
+  },
+  {
+    "id": "starrd",
+    "name": "David",
+    "lastname": "Starr",
+    "hometown": "Houston, TX",
+    "country": 1
+  }
 ]
